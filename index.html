@@ -9,6 +9,21 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+function toggleMenu() {
+    var menu = document.querySelector(".nav-links");
+    menu.classList.toggle("active");
+}
+
+var links = document.querySelectorAll(".nav-links a");
+
+for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", function() {
+        document.querySelector(".nav-links").classList.remove("active");
+    });
+}
+</script>
+
 
 <body>
 
@@ -28,12 +43,15 @@
             <li><a href="#certificats">Certificats</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
         <a href="#contact" class="connect-btn">
             Me contacter 
         </a>
+        
 
     </nav>
+    
 
 
     <!-- ACCUEIL -->
@@ -388,13 +406,17 @@
                 <div class="timeline-dot"></div>
 
                 <div class="timeline-content">
-                    <span>2025</span>
-
-                    <h3>Baccalauréat Sciences Physiques</h3>
-
+                    <span>2025 - 2027</span>
+                    <h3>Développement Digital</h3>
                     <p>
-                        Obtention du baccalauréat en sciences physiques.
+                        Formation à l'OFPPT en développement digital,
+                        avec apprentissage du développement web,
+                        des bases de données et de la programmation.
                     </p>
+
+                    
+
+                    
                 </div>
 
             </div>
@@ -405,15 +427,14 @@
                 <div class="timeline-dot"></div>
 
                 <div class="timeline-content">
-                    <span>2025 - 2027</span>
-
-                    <h3>Développement Digital</h3>
-
+                    <span>2025</span>
+                    <h3>Baccalauréat Sciences Physiques</h3>
                     <p>
-                        Formation à l'OFPPT en développement digital,
-                        avec apprentissage du développement web,
-                        des bases de données et de la programmation.
+                        Obtention du baccalauréat en sciences physiques.
                     </p>
+                    
+
+                    
                 </div>
 
             </div>
@@ -441,8 +462,7 @@
                 que j'ai obtenus.
             </p>
         </div>
-
-        <div class="certificate-card">
+         <div class="certificate-card">
 
             <div class="certificate-icon">
                 📜
@@ -450,8 +470,7 @@
 
             <div class="certificate-content">
 
-                <h3>Baccalauréat Sciences Physiques</h3>
-                <p>Diplôme obtenu en 2025</p>
+                <h3>Certification en Développement Digital</h3>
 
                 <a href="#" class="certificate-link">
                     Voir le certificat →
@@ -468,7 +487,8 @@
 
             <div class="certificate-content">
 
-                <h3>Certification Word en Ligne</h3>
+                <h3>Baccalauréat Sciences Physiques</h3>
+                <p>Diplôme obtenu en 2025</p>
 
                 <a href="#" class="certificate-link">
                     Voir le certificat →
@@ -519,7 +539,7 @@
 
             <div class="certificate-content">
 
-                <h3>Certification en Développement Digital</h3>
+                <h3>Certification Word en Ligne</h3>
 
                 <a href="#" class="certificate-link">
                     Voir le certificat →
@@ -528,10 +548,9 @@
             </div>
 
         </div>
+       
         
-
-        
-        
+ 
     </div>
 
    </section>
@@ -590,5 +609,6 @@
 </footer>
 
 </body>
+
 
 </html>
